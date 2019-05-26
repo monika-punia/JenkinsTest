@@ -1,7 +1,7 @@
 node('master'){
 
 stage('Compile'){
-bat label: '', script: 'mvn clean package'
+bat label: '', script: 'mvn package'
 }
 stage('Archiving Files'){
 archiveArtifacts 'target/*.jar'
