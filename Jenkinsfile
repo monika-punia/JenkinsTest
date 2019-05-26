@@ -1,4 +1,4 @@
-nnode('master'){
+node('master'){
     
 stage('Checkout') {
     git 'https://github.com/monika-punia/JenkinsTest.git'
