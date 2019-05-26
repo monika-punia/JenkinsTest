@@ -1,7 +1,11 @@
-node('master'){
+nnode('master'){
+    
+stage('Checkout') {
+    git 'https://github.com/monika-punia/JenkinsTest.git'
+}
 
 stage('Compile'){
-bat label: '', script: 'mvn package'
+bat label: '', script: 'mvn clean package'
 }
 stage('Archiving Files'){
 archiveArtifacts 'target/*.jar'
